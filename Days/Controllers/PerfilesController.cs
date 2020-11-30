@@ -10,22 +10,20 @@ namespace Days.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class PerfilController : ControllerBase
+    public class PerfilesController : ControllerBase
     {
 
         [HttpGet]
-        public IEnumerable<Perfil> Get(int x)
+        public IEnumerable<Perfil> Get()
         {
             using (var context = new AmaneContext())
             {
-                return context.Perfils.Where(perf => perf.UsuarioId==x).ToList();
+                return context.Perfils.ToList();
             }
 
 
         }
 
-
-
-
+        
     }
 }

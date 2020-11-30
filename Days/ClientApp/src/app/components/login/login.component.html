@@ -1,0 +1,23 @@
+
+<div class="container">
+  <h2 *ngIf="logueado==false" class="deslogueado">login</h2>
+  <h2 class="logueado" *ngIf="logueado==true">Estas Logueado</h2>
+
+  <input [(ngModel)]="user.email" type="text" class="email" placeholder="Usuario">
+  <br />
+  <input [(ngModel)]="user.password" type="password" class="pwd" placeholder="Contraseña">
+
+  <a class="link">
+    ¿Olvidaste tu contraseña?
+  </a>
+  <br />
+
+  <button class="signin" (click)="validateUser()">
+    <span>Loguear</span>
+  </button>
+  <button class="register" *ngIf="logueado==false">
+    <span>Entrar</span>
+  </button>  <button class="register" routerLink="/inicio" *ngIf="logueado==true">
+    <span>Entrar</span>
+  </button>
+</div>

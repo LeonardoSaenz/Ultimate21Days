@@ -1,1 +1,25 @@
-<p>perfil works!</p>
+<html>
+<body>
+  <app-navbar></app-navbar>
+
+  <div class="padre">
+    <div class="hijo">
+      <div class="nieto_nombre">
+        {{miperfil[0].nombre}}
+        <hr style="height:2px;border-width:0;color:rgb(0, 0, 0);background-color:rgb(181, 253, 184)">
+        <br>
+        <div class="nieto_description">
+          Mi descripción:
+          <br>
+          <br>{{miperfil[0].descripcion}}
+        </div>
+        <div class="nieto_birthday">
+          Mi cumpleaños es: {{birthday}}
+        </div>
+        <br />
+      </div>
+      <br />
+    </div>
+  </div>
+</body>
+</html>

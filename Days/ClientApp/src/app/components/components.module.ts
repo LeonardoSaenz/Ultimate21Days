@@ -1,37 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { SuperloginComponent } from './superlogin/superlogin.component';
-import { SuperregistrationComponent } from './superregistration/superregistration.component';
-import { InicioComponent } from './inicio/inicio.component';
-import { SalasComponent } from './salas/salas.component';
-import { SalaschatComponent } from './salaschat/salaschat.component';
-import { HabitosComponent } from './habitos/habitos.component';
-import { ConsejosComponent } from './consejos/consejos.component';
+import { HabitoscomComponent } from './habitoscom/habitoscom.component';
+import { NavbarComponent } from './navbar/navbar.component';
 import { PerfilComponent } from './perfil/perfil.component';
-import { HttpClientModule } from '@angular/common/http';
+import { Routes, RouterModule } from '@angular/router';
+import { InicioComponent } from './inicio/inicio.component';
+import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
-import { Routes,RouterModule } from '@angular/router';
-
 
 
 @NgModule({
-  declarations: [ SuperloginComponent, SuperregistrationComponent, InicioComponent, SalasComponent, SalaschatComponent, HabitosComponent, ConsejosComponent, PerfilComponent],
+  declarations: [HabitoscomComponent, NavbarComponent, PerfilComponent, InicioComponent, LoginComponent],
   imports: [
-    CommonModule,
-    HttpClientModule,
-    FormsModule,
-    RouterModule,
+    CommonModule,RouterModule,FormsModule
   ],
   exports: [
-    SuperloginComponent,
-    SuperregistrationComponent,
-    InicioComponent,
-    SalaschatComponent,
-    SalasComponent,
-    HabitosComponent,
-    ConsejosComponent,
-    PerfilComponent,
-  ],
+    HabitoscomComponent,NavbarComponent,PerfilComponent,RouterModule,LoginComponent
+  ]
 })
 export class ComponentsModule { }

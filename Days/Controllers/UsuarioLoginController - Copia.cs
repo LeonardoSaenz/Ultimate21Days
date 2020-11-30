@@ -10,22 +10,18 @@ namespace Days.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class PerfilController : ControllerBase
+    public class UnLoginController : ControllerBase
     {
 
         [HttpGet]
-        public IEnumerable<Perfil> Get(int x)
+        public IEnumerable<UsuarioLogin> Get(string x,string y)
         {
             using (var context = new AmaneContext())
             {
-                return context.Perfils.Where(perf => perf.UsuarioId==x).ToList();
+                return context.UsuarioLogins.Where(suar => suar.Email==x && suar.Contraseña==y).ToList();
             }
 
 
         }
-
-
-
-
     }
 }

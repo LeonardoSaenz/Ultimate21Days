@@ -1,0 +1,29 @@
+
+<html>
+<body>
+  <app-navbar></app-navbar>
+  <div class="padre">
+    <div class="hijo">
+      <div class="nieto_nombre">
+        Habitos
+
+        <div class="nieto_description">
+          ¡Presiona uno y verás los consejos!<br />
+                        
+          <div *ngFor="let habito of lsthabitos" class="habito" (click)="counter(habito.habitoId)">
+            {{habito.nombre}}
+            <div *ngIf="habito.habitoId == habitoB">
+              <div *ngFor="let consejo of lstconsejos">
+                <div *ngIf="habitoB == consejo.consejoId" class="consejo">
+                  • {{consejo.descripcion}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+      </div>
+    </div>
+  </div>
+</body>
+</html>
